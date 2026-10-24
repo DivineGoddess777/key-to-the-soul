@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#e5c7a0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Sacred Flame — Key to the Soul concept</title>
+  <path d="M100 24c9 25 32 37 32 59a32 32 0 0 1-64 0c0-14 9-28 18-37-1 19 4 24 9 27 9-13 9-30 5-49Z"/>
+  <path d="M103 72c5 11 13 17 13 26a16 16 0 0 1-32 0c0-10 11-17 19-26Z" stroke-width="1.5"/>
+  <path d="M100 116v62m0-23h21v-12m-21 25h13"/>
+  <path d="M58 50a60 60 0 0 0 0 91m84-91a60 60 0 0 1 0 91" opacity=".6" stroke-width="1.2"/>
+  <path d="m42 28 2 8 8 2-8 2-2 8-2-8-8-2 8-2Zm115 120 2 7 7 2-7 2-2 7-2-7-7-2 7-2Z" stroke-width="1.4"/>
+  <circle cx="150" cy="31" r="2" fill="#e5c7a0" stroke="none"/>
+</svg>

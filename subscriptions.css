@@ -1,0 +1,9 @@
+.subscription-panel{display:grid;grid-template-columns:1fr 1fr;gap:7%;padding:55px 7%;margin:30px 6%;border:1px solid #bb825039;background:radial-gradient(ellipse at top left,#a5622420,transparent 70%),#211820}
+.subscription-panel[hidden],.subscription-panel [hidden]{display:none}
+.subscription-panel h2{margin:15px 0 24px}.subscription-panel>div>p:not(.eyebrow){line-height:1.9;color:#cfbdaa;font-size:14px}
+.subscription-controls{align-self:center;display:flex;flex-direction:column;gap:18px;min-width:0}
+.subscription-controls label{display:flex;align-items:flex-start;gap:11px;font-size:13px;line-height:1.85;color:#d0bba7}
+.subscription-controls input[type=checkbox]{flex:0 0 20px;width:20px;height:20px;margin:5px 0 0;accent-color:#cc8b59}
+.subscription-controls button{align-self:flex-start;min-height:46px}.subscription-controls form{padding:22px 0;border-top:1px solid #bb825039;display:grid;gap:15px}
+#subscription-status{line-height:1.85;font-size:14px;overflow-wrap:anywhere;margin:0}
+@media(max-width:650px){.subscription-panel{grid-template-columns:1fr;gap:22px;padding:28px 6%;margin:24px 6%}.subscription-panel h2{font-size:43px}.subscription-controls label{font-size:13px}.subscription-controls button{min-height:48px;max-width:100%}}

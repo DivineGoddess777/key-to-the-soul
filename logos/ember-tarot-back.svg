@@ -1,0 +1,8 @@
+<svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><radialGradient id="card-back-bg"><stop stop-color="#3a2632"/><stop offset="1" stop-color="#130f17"/></radialGradient></defs><rect x="1" y="1" width="158" height="218" rx="12" fill="url(#card-back-bg)" stroke="#b9845b"/><rect x="8" y="8" width="144" height="204" rx="8" fill="none" stroke="#c18b6055"/><path d="M18 43L80 15L142 43V177L80 205L18 177Z" fill="none" stroke="#c18b6025"/><ellipse cx="80" cy="110" rx="52" ry="69" fill="none" stroke="#c18b6045"/><ellipse cx="80" cy="110" rx="44" ry="61" fill="none" stroke="#c18b6020"/><svg x="57" y="70" width="46" height="78" xmlns="http://www.w3.org/2000/svg" viewBox="95 55 130 220" fill="none" stroke="#c18b60" stroke-linecap="round" stroke-linejoin="round">
+<title>The Ember Seal compact glyph — Key to the Soul</title>
+<g color="#c18b60"><path d="M161 78c17 31 43 52 41 80-2 28-26 45-46 42-26-4-44-25-40-50 3-18 15-31 25-47-3 23 4 37 11 42 16-20 15-42 9-67Z" stroke-width="2.1"/>
+<path d="M162 118c6 24 24 34 20 54-3 15-17 23-29 16-15-8-15-21-8-34 0 12 4 17 8 19 8-17 13-34 9-55Z" fill="#c18b60" stroke="none"/>
+<path d="M160 203v44m-9-28h18m-9 16h21v-12m-21 24h12" stroke-width="2.2"/>
+<path d="M119 112c-20 28-14 63 6 80m76-77c17 27 10 59-9 75" stroke-width=".75" opacity=".7"/>
+<path d="M160 64v-9m-8 9h16" stroke-width="1.2"/></g>
+</svg><circle cx="80" cy="43" r="7" fill="#c18b60"/><circle cx="80" cy="177" r="7" fill="none" stroke="#c18b60"/><path d="M28 110H38M33 105V115M122 110H132M127 105V115M80 21V29M80 191V199" stroke="#c18b60"/></svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="#d6a3b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Velvet Oracle — Key to the Soul concept</title>
+  <path d="M53 144V78a47 47 0 0 1 94 0v66"/>
+  <path d="M62 139V79a38 38 0 0 1 76 0v60" opacity=".45" stroke-width="1"/>
+  <circle cx="100" cy="85" r="13"/>
+  <path d="M100 98v59m0-15h14v-10m-14 24h9M79 73a12 12 0 0 0 0 24 16 16 0 0 1 0-24Zm42 0a12 12 0 0 1 0 24 16 16 0 0 0 0-24Z"/>
+  <path d="M82 165c-26-6-44-25-43-49m13 28c-15 0-22-8-22-16 13 0 20 7 22 16Zm-9-19c-12-4-17-13-14-20 11 4 16 11 14 20Zm75 40c26-6 44-25 43-49m-13 28c15 0 22-8 22-16-13 0-20 7-22 16Zm9-19c12-4 17-13 14-20-11 4-16 11-14 20Z" stroke-width="1.5"/>
+  <path d="m100 14 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/>
+</svg>

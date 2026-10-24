@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#17120f">
+  <title>The Ember Seal · Key to the Soul</title>
+  <meta name="description" content="A floating, interactive sculpted Ember Seal for Key to the Soul.">
+  <link rel="icon" href="logos/sacred-flame-compact.svg"><link rel="stylesheet" href="ember-3d.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+  <script type="module" src="ember-3d.js"></script>
+</head>
+<body>
+  <main class="experience">
+    <header><a href="index.html" target="_top">KEY TO THE SOUL <small>THE EMBER SEAL</small></a><span>A LITTLE FIRE. A LITTLE MOONLIGHT.</span></header>
+    <div class="stage" id="stage">
+      <img class="artwork" src="images/ember-seal-copper.png" alt="Sculpted copper Ember Seal, with beveled copper edges, floating moon phases, and a shadow beneath">
+      <div class="title"><span>THE CHOSEN DIRECTION / STUDY 03</span><h1>Her fire.<br><em>Given form.</em></h1></div>
+      <div class="caption"><span>OBSIDIAN / CANDLELIGHT / COPPER</span><p>A flame. A key.<br>A return to your own power.</p></div>
+      <div class="floor" aria-hidden="true"></div>
+    </div>
+    <div class="bottom"><p id="status" role="status">Preparing the interactive sculpture…</p><div class="controls" aria-label="Sculpture controls"><button id="motion" aria-pressed="false" disabled>Pause motion</button><button id="depth" aria-pressed="false" disabled>See the depth</button><button id="reset" disabled>Reset view</button><button id="save" disabled>Save view ↓</button></div></div>
+    <div class="finishes" aria-label="Metal finish"><span>THE FINISH</span><button data-finish="gold" aria-pressed="false"><i style="--color:#e5c7a0"></i>Candlelight gold</button><button data-finish="copper" aria-pressed="true"><i style="--color:#ac6e48"></i>Warm copper</button><button data-finish="champagne" aria-pressed="false"><i style="--color:#e9dcc5"></i>Champagne</button><button id="art-toggle" aria-pressed="false" disabled>View sculpted artwork</button></div>
+    <p class="help">Drag to turn · Arrow keys to tilt · Double-click to reset</p>
+  </main>
+</body>
+</html>
