@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fff8f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1718" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:," />
+  <title>Key to the Soul — Hand-Poured Intention Candles</title>
+  <meta name="description" content="Hand-poured intention candles for reflection, release, self-love, and coming home to yourself." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Lora:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #fff8f5;
+      --surface: #ffffff;
+      --surface-soft: #f8e7e1;
+      --ink: #2b2022;
+      --muted: #6f5b60;
+      --line: #e7cec8;
+      --berry: #9b3c55;
+      --berry-deep: #72283c;
+      --coral: #df745e;
+      --apricot: #f3b477;
+      --sage: #71826d;
+      --shadow: 0 22px 60px rgba(86, 40, 48, .12);
+      --font-sans: "DM Sans", system-ui, sans-serif;
+      --font-serif: "Lora", Georgia, serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #1c1718;
+        --surface: #261f21;
+        --surface-soft: #3a292c;
+        --ink: #fff4ef;
+        --muted: #d1bfc2;
+        --line: #513b40;
+        --berry: #ef8da4;
+        --berry-deep: #ffc2cf;
+        --coral: #f39582;
+        --apricot: #f4bd85;
+        --sage: #a8b9a2;
+        --shadow: 0 22px 60px rgba(0, 0, 0, .3);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 0;
+      overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+    button, input, textarea, select { font: inherit; }
+    a { color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--apricot); outline-offset: 3px; }
+
+    .skip-link {
+      position: fixed;
+      top: .75rem;
+      left: .75rem;
+      z-index: 50;
+      transform: translateY(-160%);
+      padding: .65rem 1rem;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+    }
+    .skip-link:focus { transform: none; }
+
+    .site-nav {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: flex-end;
+      gap: clamp(.7rem, 2.2vw, 2rem);
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .site-nav a {
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .site-nav a:hover { color: var(--berry); }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      width: min(1180px, calc(100% - 2rem));
+      min-height: 720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr);
+      align-items: center;
+      gap: clamp(2rem, 5vw, 5.75rem);
+      padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(5rem, 10vw, 8.5rem);
+    }
+    .hero-copy { max-width: 670px; }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin: 0 0 1.1rem;
+      color: var(--berry);
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 2.75rem;
+      height: 2px;
+      background: currentColor;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 8ch;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-serif);
+      font-size: clamp(3.6rem, 8vw, 7.8rem);
+      font-weight: 600;
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+    .hero-lede {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      line-height: 1.65;
+    }
+    .button-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      padding: .78rem 1.15rem;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .button:hover { background: var(--berry); border-color: var(--berry); color: #fff; }
+    .button.secondary { background: transparent; color: var(--ink); }
+    .button.secondary:hover { background: var(--surface-soft); border-color: var(--berry); color: var(--berry-deep); }
+
+    .hero-art {
+      position: relative;
+      min-height: 500px;
+      display: grid;
+      place-items: center;
+    }
+    .art-field {
+      position: relative;
+      width: min(100%, 470px);
+      aspect-ratio: .87;
+      overflow: hidden;
+      background: var(--surface-soft);
+      border-radius: 48% 48% 18px 18px;
+      box-shadow: var(--shadow);
+    }
+    .art-field::before,
+    .art-field::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid color-mix(in srgb, var(--berry) 55%, transparent);
+    }
+    .art-field::before { width: 330px; height: 330px; right: -70px; top: -80px; }
+    .art-field::after { width: 220px; height: 220px; left: -95px; bottom: 28px; }
+    .craft-illustration { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .hand-note {
+      position: absolute;
+      right: -1rem;
+      bottom: 2.2rem;
+      width: 175px;
+      padding: 1rem 1.05rem;
+      transform: rotate(-3deg);
+      background: var(--surface);
+      box-shadow: 0 12px 32px rgba(86, 40, 48, .16);
+      color: var(--berry-deep);
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    .section {
+      width: min(1180px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: clamp(4.5rem, 9vw, 8rem) 0;
+    }
+    .section-label {
+      margin-bottom: .55rem;
+      color: var(--berry);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-family: var(--font-serif);
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+    }
+    .section-intro { max-width: 680px; color: var(--muted); font-size: 1.08rem; }
+
+    .story-band {
+      position: relative;
+      background: var(--berry-deep);
+      color: #fff8f5;
+    }
+    @media (prefers-color-scheme: dark) {
+      .story-band { background: #4b2430; }
+    }
+    .story-band .section { display: block; }
+    .story-band .section-label { color: #f8baa6; }
+    .story-heading {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: start;
+      margin-bottom: clamp(2.5rem, 6vw, 5rem);
+    }
+    .story-heading h2 { max-width: 10ch; margin-bottom: 0; }
+    .story-declaration {
+      margin: .4rem 0 1.4rem;
+      color: #f8baa6;
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-style: italic;
+      line-height: 1.35;
+    }
+    .story-lead { color: #fff8f5; font-size: clamp(1.08rem, 2vw, 1.28rem); }
+    .story-lead strong { color: #fff; }
+    .story-more {
+      margin-top: 1.6rem;
+      border-top: 1px solid rgba(255,255,255,.28);
+      border-bottom: 1px solid rgba(255,255,255,.28);
+    }
+    .story-more summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+      color: #fff;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+    .story-more summary::-webkit-details-marker { display: none; }
+    .story-more summary::after { content: "+"; color: #f8baa6; font-family: var(--font-serif); font-size: 1.8rem; font-weight: 500; }
+    .story-more[open] summary::after { content: "−"; }
+    .story-long { max-width: 760px; padding: .5rem 0 1.2rem; }
+    .story-long p { color: #f3dfe2; }
+    .story-long .story-turn { color: #fff; font-family: var(--font-serif); font-size: 1.25rem; }
+    .story-closing {
+      margin: 2rem 0 0;
+      padding: 1.35rem 1.5rem;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      line-height: 1.45;
+    }
+    .story-closing strong { color: #f8baa6; }
+    .story-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .story-card {
+      padding: clamp(1.25rem, 2.5vw, 1.8rem);
+      background: rgba(255,255,255,.07);
+      border-top: 3px solid #f8baa6;
+    }
+    .story-card .chapter { margin-bottom: .7rem; color: #f8baa6; font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .story-card h3 { margin-bottom: .75rem; font-family: var(--font-serif); font-size: clamp(1.35rem, 2.4vw, 1.8rem); }
+    .story-card p:last-child { margin-bottom: 0; color: #f3dfe2; }
+
+    .manifesto { border-bottom: 1px solid var(--line); }
+    .manifesto-head {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: start;
+      margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+    }
+    .manifesto-quote { margin: 0; color: var(--berry-deep); font-family: var(--font-serif); font-size: clamp(1.7rem, 4vw, 3.2rem); line-height: 1.25; }
+    .signature-lines { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    .signature-lines li { padding: .8rem 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .signature-lines li:nth-child(2n) { color: var(--ink); font-weight: 700; }
+
+    .gallery-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .gallery-head .section-intro { margin-bottom: .25rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      grid-template-rows: repeat(2, minmax(255px, 1fr));
+      gap: 1rem;
+    }
+    .product-slot {
+      position: relative;
+      min-height: 255px;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .product-slot.large { grid-row: 1 / 3; min-height: 530px; }
+    .slot-art {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 18%, color-mix(in srgb, var(--apricot) 72%, transparent) 0 8%, transparent 8.5%),
+        radial-gradient(circle at 75% 30%, color-mix(in srgb, var(--coral) 42%, transparent) 0 13%, transparent 13.5%),
+        linear-gradient(140deg, var(--surface-soft), color-mix(in srgb, var(--sage) 18%, var(--surface)));
+    }
+    .product-slot:nth-child(2) .slot-art {
+      background:
+        repeating-linear-gradient(45deg, transparent 0 18px, color-mix(in srgb, var(--berry) 10%, transparent) 18px 20px),
+        var(--surface-soft);
+    }
+    .product-slot:nth-child(3) .slot-art {
+      background:
+        radial-gradient(circle at 78% 24%, color-mix(in srgb, var(--sage) 55%, transparent) 0 12%, transparent 12.5%),
+        radial-gradient(circle at 28% 72%, color-mix(in srgb, var(--apricot) 60%, transparent) 0 17%, transparent 17.5%),
+        var(--surface);
+    }
+    .slot-shape {
+      position: absolute;
+      width: 48%;
+      aspect-ratio: 1;
+      left: 26%;
+      top: 22%;
+      border: 2px dashed color-mix(in srgb, var(--berry) 45%, transparent);
+      border-radius: 50%;
+    }
+    .slot-shape::before, .slot-shape::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--berry);
+    }
+    .slot-shape::before { top: 31%; width: 20%; height: 20%; border-radius: 50%; }
+    .slot-shape::after { top: 47%; width: 8%; height: 25%; border-radius: 2px 2px 5px 5px; }
+    .slot-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .slot-caption {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      padding: .95rem 1rem;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 8px 26px rgba(62, 30, 36, .13);
+    }
+    .slot-caption strong { display: block; font-family: var(--font-serif); font-size: 1.08rem; }
+    .slot-caption span { display: block; color: var(--muted); font-size: .82rem; }
+
+    .shows-wrap {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: center;
+      padding: clamp(2rem, 5vw, 4rem);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .show-card {
+      padding: clamp(1.4rem, 4vw, 2.5rem);
+      background: var(--surface-soft);
+      border-top: 5px solid var(--coral);
+    }
+    .show-card .status {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin-bottom: 1.4rem;
+      color: var(--berry-deep);
+      font-weight: 800;
+    }
+    .show-card .status::before { content: ""; width: .62rem; height: .62rem; background: var(--coral); border-radius: 50%; }
+    .show-card h3 { margin-bottom: .65rem; font-family: var(--font-serif); font-size: clamp(1.7rem, 4vw, 2.5rem); }
+    .show-card p { margin-bottom: 0; color: var(--muted); }
+    .schedule-fields {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .6rem;
+      margin-top: 1.5rem;
+    }
+    .schedule-fields span {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      padding: .55rem;
+      border: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    .custom-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: start;
+    }
+    .custom-note {
+      position: sticky;
+      top: 1.5rem;
+    }
+    .steps { counter-reset: step; margin: 2rem 0 0; padding: 0; list-style: none; }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 2.15rem 1fr;
+      gap: .8rem;
+      align-items: start;
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+    .steps li::before {
+      content: counter(step);
+      display: grid;
+      width: 2.15rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--berry-deep);
+      font-weight: 800;
+    }
+    .request-form {
+      padding: clamp(1.35rem, 4vw, 2.5rem);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .form-heading { margin-bottom: 1.5rem; font-family: var(--font-serif); font-size: 1.65rem; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field { margin-bottom: 1rem; }
+    .field.full { grid-column: 1 / -1; }
+    label { display: block; margin-bottom: .38rem; font-size: .87rem; font-weight: 800; }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--paper);
+      color: var(--ink);
+      padding: .82rem .85rem;
+    }
+    textarea { min-height: 132px; resize: vertical; }
+    input::placeholder, textarea::placeholder { color: color-mix(in srgb, var(--muted) 74%, transparent); }
+    .form-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: .4rem;
+    }
+    .form-foot small { max-width: 320px; color: var(--muted); line-height: 1.45; }
+    .copy-button { cursor: pointer; border: 0; }
+    .copy-button:disabled { cursor: wait; opacity: .75; }
+    .form-status {
+      display: none;
+      margin: 1rem 0 0;
+      padding: .8rem .9rem;
+      background: color-mix(in srgb, var(--sage) 18%, var(--surface));
+      color: var(--ink);
+      font-size: .9rem;
+    }
+    .form-status.show { display: block; }
+
+    footer {
+      padding: 3.5rem 1rem calc(3.5rem + env(safe-area-inset-bottom));
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .footer-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: end;
+    }
+    .footer-line { max-width: 520px; margin: 0; font-family: var(--font-serif); font-size: clamp(1.45rem, 3vw, 2.3rem); line-height: 1.25; }
+    .socials { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .7rem 1.2rem; }
+    .social-placeholder { color: color-mix(in srgb, var(--paper) 76%, transparent); font-size: .88rem; }
+    .social-placeholder strong { color: var(--paper); }
+    .copyright { grid-column: 1 / -1; margin: 1rem 0 0; padding-top: 1.1rem; border-top: 1px solid color-mix(in srgb, var(--paper) 20%, transparent); color: color-mix(in srgb, var(--paper) 66%, transparent); font-size: .8rem; }
+
+    @media (max-width: 830px) {
+      .hero { grid-template-columns: 1fr; min-height: 0; }
+      .hero-copy { padding-top: 1rem; }
+      .hero-art { min-height: 0; }
+      .art-field { width: min(92%, 480px); }
+      .hand-note { right: 0; }
+      .story-heading, .manifesto-head, .shows-wrap, .custom-grid { grid-template-columns: 1fr; }
+      .story-heading h2 { max-width: 13ch; }
+      .story-cards { grid-template-columns: 1fr; }
+      .custom-note { position: static; }
+      .gallery-head { display: block; }
+    }
+
+    @media (max-width: 610px) {
+      .site-nav { justify-content: flex-start; overflow: hidden; gap: .9rem; }
+      .site-nav a { font-size: .78rem; white-space: nowrap; }
+      h1 { font-size: clamp(3.45rem, 18vw, 5rem); }
+      .hero { padding-top: 3.2rem; }
+      .hand-note { width: 150px; font-size: .88rem; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+      .product-slot, .product-slot.large { grid-row: auto; min-height: 340px; }
+      .product-slot.large { min-height: 460px; }
+      .schedule-fields, .field-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .form-foot { align-items: stretch; flex-direction: column; }
+      .copy-button { width: 100%; }
+      .footer-inner { grid-template-columns: 1fr; align-items: start; }
+      .socials { justify-content: flex-start; }
+      .copyright { grid-column: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Page sections">
+    <a href="#story">Story</a>
+    <a href="#collection">Collection</a>
+    <a href="#shows">Shows</a>
+    <a href="#custom">Custom orders</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Hand-poured by Keianna</p>
+        <h1 id="hero-title">Key to the Soul</h1>
+        <p class="hero-lede">Light the flame. Shift the energy. Come back to yourself. Intention candles created for the healing, the becoming, the letting go, and the beginning again.</p>
+        <div class="button-row">
+          <a class="button" href="#story">Read the story <span aria-hidden="true">→</span></a>
+          <a class="button secondary" href="#collection">Explore the collection</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-field">
+          <svg class="craft-illustration" viewBox="0 0 470 540" role="img" aria-label="Decorative illustration of a key, ribbon and handmade craft details">
+            <path d="M85 80 C160 20 312 28 392 106 C452 166 424 262 377 321 C328 384 227 435 120 398 C20 362 -1 205 85 80Z" fill="none" stroke="currentColor" opacity=".08" stroke-width="2"/>
+            <path d="M57 371 C113 316 169 326 190 370 C210 411 173 454 116 455" fill="none" stroke="#71826d" stroke-width="14" stroke-linecap="round" opacity=".78"/>
+            <path d="M112 451 C122 420 151 404 184 414" fill="none" stroke="#71826d" stroke-width="7" stroke-linecap="round" opacity=".78"/>
+            <g transform="translate(154 109) rotate(-13 105 150)">
+              <circle cx="106" cy="76" r="62" fill="none" stroke="#9b3c55" stroke-width="20"/>
+              <circle cx="106" cy="76" r="22" fill="#fff8f5" stroke="#9b3c55" stroke-width="8"/>
+              <path d="M106 136 V350 H145 V320 H179 V285 H145 V248 H181 V211 H145 V136Z" fill="#df745e" stroke="#9b3c55" stroke-width="8" stroke-linejoin="round"/>
+            </g>
+            <path d="M57 170 C99 121 130 132 143 177 C155 217 119 255 71 228 C42 212 34 195 57 170Z" fill="#f3b477" opacity=".9"/>
+            <path d="M356 362 C385 324 423 337 426 377 C429 415 390 435 359 412 C337 395 338 385 356 362Z" fill="#df745e" opacity=".72"/>
+            <path d="M337 137 C365 103 396 112 404 143 C414 181 372 199 345 181 C322 166 322 155 337 137Z" fill="#71826d" opacity=".66"/>
+            <g fill="#9b3c55">
+              <circle cx="96" cy="113" r="6"/><circle cx="414" cy="240" r="5"/><circle cx="77" cy="298" r="4"/>
+            </g>
+            <path d="M73 286 C101 272 123 284 126 307 C129 331 106 346 84 335" fill="none" stroke="#9b3c55" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 11"/>
+          </svg>
+        </div>
+        <div class="hand-note">come as you are.<br />leave a little lighter.</div>
+      </div>
+    </section>
+
+    <section id="story" class="story-band">
+      <div class="section">
+        <div class="story-heading">
+          <div>
+            <p class="section-label">The story behind Key to the Soul</p>
+            <h2>More than a candle. A feeling. A shift. A return to you.</h2>
+          </div>
+          <div>
+            <p class="story-declaration">It started with one flame.</p>
+            <p class="story-lead">Before Key to the Soul was a business, before there was a brand, a collection, or a single customer, there was me, at home, pouring a candle for a woman I was learning to love a little deeper: <strong>myself.</strong></p>
+            <p class="story-lead">One Love Candle. One intention to pour something into myself for a change instead of constantly pouring from an empty cup.</p>
+
+            <details class="story-more">
+              <summary>Keep reading the full story</summary>
+              <div class="story-long">
+                <p>I wanted to create something that felt like peace. Something that reminded me to slow down, breathe, reconnect with myself, and make room for the woman I was becoming. I didn’t know that one little candle would grow into something bigger than me. I just knew how it felt to light that flame and be intentional about what I wanted to welcome into my life.</p>
+                <p>And honestly? Sometimes, that’s how the most meaningful things begin. Not with a perfect plan, but with a personal need, a little faith, and the courage to create something out of what you’re feeling.</p>
+                <p class="story-turn">That’s where Key to the Soul was born.</p>
+                <p>This brand was built around the things we don’t always say out loud. The heavy days. The overthinking. The emotional baggage. The seasons when life feels overwhelming, when you’ve been showing up for everybody else but struggling to show up for yourself. The moments when you know something has to change, even if you’re still figuring out what that looks like.</p>
+                <p>Because let’s be real: sometimes you don’t need another person telling you to stay positive. Sometimes you need a moment to yourself, a deep breath, a little silence, and the space to let that shit go.</p>
+                <p>And that’s exactly why creations like <em>Let That Shit Go</em> have such a special place in this brand. It’s more than a name that makes you laugh or a candle that smells good. It’s a reminder that you don’t have to carry everything. Every disappointment, every draining connection, every version of yourself you’ve outgrown, every piece of energy that no longer belongs in your next chapter. You are allowed to release it.</p>
+                <p>I want every candle to feel like an invitation back to yourself. A reason to romanticize your peace. A reminder to protect your energy, honor your feelings, set your intentions, and create a space where you can finally exhale.</p>
+                <p>Every piece is hand-poured with care and created with intention, because I believe the little things we do for ourselves matter. The quiet morning. The nighttime reset. The bath after a long day. The candle you light when you’re ready to stop carrying the world on your shoulders.</p>
+                <p>These moments might seem small, but sometimes the smallest rituals become the beginning of the biggest shifts.</p>
+                <p class="story-turn">Key to the Soul is about coming home to yourself.</p>
+                <p>It’s about self-love that goes deeper than the surface. Peace that you stop apologizing for. Boundaries that you stop feeling guilty about. Growth that doesn’t require you to explain yourself to everybody. It’s about learning that you can love people and still choose yourself. You can outgrow things without hating what they once meant to you. And you can start over as many times as your soul needs.</p>
+                <p>I created this brand from a place of wanting more intention, more peace, more meaning, and more connection to the energy I allow into my life. Now, I get to share that feeling with you.</p>
+                <p>So whether you’re manifesting something new, releasing something old, calling your power back, or simply trying to make it through the week without losing your mind, I hope you find something here that speaks to you.</p>
+                <p>Light your candle. Set your intention. Feel what you need to feel. Release what you’re ready to release.</p>
+              </div>
+            </details>
+
+            <p class="story-closing">And always remember: <strong>you hold the key.</strong><br />Welcome to Key to the Soul. Come as you are. Leave a little lighter.</p>
+          </div>
+        </div>
+
+        <div class="story-cards" aria-label="The heart of the story">
+          <article class="story-card">
+            <p class="chapter">The beginning</p>
+            <h3>It Started With Me</h3>
+            <p>It wasn’t about building a business at first. It was about creating something I needed for myself. My first Love Candle was poured with one intention: to pour love back into me. What began as a personal ritual became a passion, and that passion became Key to the Soul. Sometimes, the thing that helps you find yourself becomes the very thing you’re meant to share with the world.</p>
+          </article>
+          <article class="story-card">
+            <p class="chapter">The favorites</p>
+            <h3>Made for the Letting Go</h3>
+            <p>Meet <em>Let That Shit Go</em>—for the days when you’re done carrying what was never yours to hold. The stress, the negativity, the old energy, the things you’ve outgrown. Consider it your little reminder to breathe, reset, and make room for better. Because protecting your peace isn’t selfish. It’s necessary.</p>
+          </article>
+          <article class="story-card">
+            <p class="chapter">The meaning</p>
+            <h3>Unlock What’s Within</h3>
+            <p>Key to the Soul is a reminder that what you’re searching for doesn’t always live outside of you. Sometimes, the love, clarity, courage, and peace you need begin with reconnecting to yourself. These candles accompany your rituals, hold space for your intentions, and remind you that your inner peace is worth protecting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto-head">
+        <div>
+          <p class="section-label">The brand manifesto</p>
+          <h2 id="manifesto-title">Make room for the life your soul has been asking for.</h2>
+        </div>
+        <div>
+          <p class="manifesto-quote">“Light the flame. Shift the energy. Come back to yourself.”</p>
+          <ul class="signature-lines">
+            <li>Some things need to be released, not explained.</li>
+            <li>Your peace is the priority. Everything else can wait.</li>
+            <li>For the healing, the becoming, the letting go, and the beginning again.</li>
+            <li>Not just candles. Little reminders of who the hell you are.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="collection" class="section">
+      <div class="gallery-head">
+        <div>
+          <p class="section-label">The collection</p>
+          <h2>Made for your rituals.</h2>
+        </div>
+        <p class="section-intro">Hand-poured intention candles created to clear negative energy, raise your vibration, and welcome peace and abundance into your sacred space.</p>
+      </div>
+
+      <div class="gallery-grid" aria-label="Product photos">
+        <article class="product-slot">
+          <div class="slot-art"><img src="images/love-333.jpg" alt="Love 333 candle with rose quartz and autumn botanicals" loading="lazy" /></div>
+          <div class="slot-caption">
+            <strong>Love 333</strong>
+            <span>Autumn wreath</span>
+          </div>
+        </article>
+        <article class="product-slot">
+          <div class="slot-art"><img src="images/let-that-shit-go-1010.jpg" alt="Let That Shit Go 1010 candle with dried botanicals and quartz" loading="lazy" /></div>
+          <div class="slot-caption">
+            <strong>Let That Shit Go 1010</strong>
+            <span>Marshmallow scent</span>
+          </div>
+        </article>
+        <article class="product-slot">
+          <div class="slot-art"><img src="images/prosperity-888.jpg" alt="Prosperity 888 candle, lit, candy corn scent" loading="lazy" /></div>
+          <div class="slot-caption">
+            <strong>Prosperity 888</strong>
+            <span>Candy corn scent</span>
+          </div>
+        </article>
+        <article class="product-slot">
+          <div class="slot-art"><img src="images/smells-like-happy.jpg" alt="Smells Like Happy double-wick mug candle with crystals" loading="lazy" /></div>
+          <div class="slot-caption">
+            <strong>Smells Like Happy</strong>
+            <span>Double-wick ritual mug</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="shows" class="section">
+      <div class="shows-wrap">
+        <div>
+          <p class="section-label">Find us in person</p>
+          <h2>Craft show dates are coming soon.</h2>
+          <p class="section-intro">When events are booked, this section can share where to shop, when doors open, and what to look for at the Key to the Soul table.</p>
+        </div>
+        <div class="show-card">
+          <div class="status">Schedule placeholder</div>
+          <h3>Next event to be announced</h3>
+          <p>Keianna’s confirmed show information will appear here.</p>
+          <div class="schedule-fields" aria-label="Event details to add">
+            <span>Date &amp; time</span>
+            <span>Venue &amp; city</span>
+            <span>Event link</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="custom" class="section custom-grid">
+      <div class="custom-note">
+        <p class="section-label">Custom orders</p>
+        <h2>Start with your idea.</h2>
+        <p class="section-intro">Use the form to organize the details of a custom piece. For now, it creates a ready-to-send request you can copy; Keianna’s contact link can be connected once it’s chosen.</p>
+        <ol class="steps">
+          <li>Tell Keianna what you’re imagining.</li>
+          <li>Add your timing, colors, and budget.</li>
+          <li>Copy the request and send it when contact details are live.</li>
+        </ol>
+      </div>
+
+      <form class="request-form" id="request-form">
+        <h3 class="form-heading">Custom piece request</h3>
+        <div class="field-grid">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Name" />
+          </div>
+          <div class="field">
+            <label for="contact">Best way to reach you</label>
+            <input id="contact" name="contact" autocomplete="email" placeholder="Email or social handle" />
+          </div>
+          <div class="field full">
+            <label for="idea">What would you like made?</label>
+            <textarea id="idea" name="idea" placeholder="Describe the piece, colors, size, wording, or inspiration…" required></textarea>
+          </div>
+          <div class="field">
+            <label for="date">When do you need it?</label>
+            <input id="date" name="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="budget">Budget range</label>
+            <select id="budget" name="budget">
+              <option value="">Choose a range</option>
+              <option>Under $25</option>
+              <option>$25–$50</option>
+              <option>$50–$100</option>
+              <option>$100+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-foot">
+          <small>This first draft doesn’t send messages yet. Your contact link will be added when Keianna chooses where she wants to receive requests.</small>
+          <button class="button copy-button" type="submit">Copy request details</button>
+        </div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-line">Come as you are. Leave a little lighter.</p>
+      <div class="socials" aria-label="Social links to add">
+        <span class="social-placeholder"><strong>Instagram</strong> · handle coming soon</span>
+        <span class="social-placeholder"><strong>Facebook</strong> · page coming soon</span>
+      </div>
+      <p class="copyright">© <span id="year"></span> Key to the Soul · Handmade by Keianna</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      var form = document.getElementById('request-form');
+      var status = document.getElementById('form-status');
+      var button = form.querySelector('button[type="submit"]');
+
+      function copyFallback(text) {
+        var area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.opacity = '0';
+        document.body.appendChild(area);
+        area.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(area);
+        return ok;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+
+        var data = new FormData(form);
+        var lines = [
+          'CUSTOM ORDER REQUEST — KEY TO THE SOUL',
+          '',
+          'Name: ' + (data.get('name') || 'Not provided'),
+          'Contact: ' + (data.get('contact') || 'Not provided'),
+          'Needed by: ' + (data.get('date') || 'Flexible'),
+          'Budget: ' + (data.get('budget') || 'Not provided'),
+          '',
+          'Idea:',
+          data.get('idea')
+        ];
+        var text = lines.join('\n');
+        button.disabled = true;
+
+        var finish = function (copied) {
+          status.textContent = copied
+            ? 'Copied! Paste these details into a message once Keianna’s contact link is added.'
+            : 'Your request is ready, but this browser could not copy it. Select the text in your idea field to copy it manually.';
+          status.classList.add('show');
+          button.disabled = false;
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { finish(true); }).catch(function () { finish(copyFallback(text)); });
+        } else {
+          finish(copyFallback(text));
+        }
+      });
+    }());
+  </script>
+</body>
+</html>

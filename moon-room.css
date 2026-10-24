@@ -1,0 +1,52 @@
+@import url('fonts.css');
+:root{color-scheme:dark;font-family:Manrope,Arial,sans-serif;background:#151014;color:#eee1d3;--copper:#c18b60;--bright:#e2ad85;--muted:#b6a093;--line:#c18b6038;--serif:'Cormorant Garamond',Georgia,serif}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,select,textarea{font:inherit}button{cursor:pointer;color:inherit}button:disabled{opacity:.4;cursor:default}:focus-visible{outline:2px solid var(--bright);outline-offset:5px}[hidden]{display:none!important}.moon-room{max-width:1300px;margin:auto;background:radial-gradient(ellipse at 50% 32%,#4f2b3a2b,transparent 65%),#151014}.room-header{display:flex;justify-content:space-between;align-items:center;padding:24px 5%;gap:25px;border-bottom:1px solid var(--line)}.room-header>a{display:flex;align-items:center;gap:12px}.room-header>a>span{font-family:var(--serif);font-size:26px;line-height:1}.room-header small{display:block;font-family:Manrope,Arial,sans-serif;font-size:6px;color:var(--copper);letter-spacing:1.6px;margin-top:9px}.room-header>span{font-size:7px;color:var(--muted);letter-spacing:1.7px}.room-intro{text-align:center;padding:42px 20px 26px}.eyebrow{font-size:7px;letter-spacing:2px;color:var(--copper);margin:0}h1{font-family:var(--serif);font-weight:400;font-size:70px;line-height:1.05;letter-spacing:-2px;margin:16px 0}em{font-weight:400;color:var(--bright)}.room-intro>p:last-child{font-size:11px;line-height:1.9;color:var(--muted);margin:0}.room-modes{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:0 20px}.room-modes button{border:1px solid var(--line);background:none;min-height:44px;padding:11px 23px;font-size:15px;color:var(--copper)}.room-modes button span{font-size:10px;margin-left:10px;color:var(--muted)}.room-modes button[aria-pressed=true]{border-color:#c18b6080;background:#c18b6010}.room-modes button[aria-pressed=true] span{color:var(--bright)}.room-stage{position:relative;margin:15px 5% 0;height:490px;isolation:isolate}#zen-canvas{display:block;width:100%;height:100%;border-radius:50% 50% 12% 12%;touch-action:none;cursor:grab;outline-offset:-6px}.room-stage.dragging #zen-canvas{cursor:grabbing}.room-stage.water #zen-canvas{cursor:crosshair}.stage-whisper{position:absolute;bottom:17px;left:15px;right:15px;text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:#c6a184;pointer-events:none;margin:0}.zen-clock-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}.zen-clock-wrap strong{font-family:var(--serif);font-size:95px;font-weight:400;line-height:1;color:var(--bright);font-variant-numeric:tabular-nums}.zen-clock-wrap>span{display:block;font-size:6px;letter-spacing:2px;color:var(--muted);margin-top:20px;white-space:nowrap}.zen-instructions{text-align:center;color:var(--muted);font-size:10px;line-height:1.9;padding:0 25px;margin:8px 0 18px}.room-controls{display:flex;align-items:center;justify-content:center;gap:20px;padding:0 5%;flex-wrap:wrap}.room-controls>div{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}.room-controls button{background:none;border:1px solid var(--line);padding:11px 15px;min-height:43px;font-size:9px}.room-controls button.primary{background:var(--copper);color:#17100c;border-color:var(--copper)}.room-controls label{font-size:8px;color:var(--muted)}.room-controls select{padding:9px 12px;background:#1e1518;color:var(--bright);border:1px solid var(--line);margin-left:8px;font-size:10px}#zen-motion{border:0;border-bottom:1px solid var(--line);padding-left:0;padding-right:0}.room-status{font-size:10px;line-height:1.8;min-height:18px;text-align:center;color:var(--bright);padding:0 20px;margin:20px 0 30px}.release-note{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin:25px 7% 0;padding:35px 0;border-top:1px solid var(--line)}.release-note label{display:block;font-family:var(--serif);font-size:36px;line-height:1.15;margin-top:12px}.release-note>div>p:last-child{font-size:9px;line-height:1.9;color:var(--muted);max-width:290px}.release-note textarea{display:block;width:100%;padding:15px;color:#e4d1c1;border:1px solid var(--line);background:#100c1088;line-height:1.8;font-size:12px;resize:vertical;min-height:90px;max-height:180px;border-radius:0}.release-note textarea::placeholder{color:#9c8277}.release-note>div>div{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:12px}#release-help{font-size:8px;color:var(--muted)}#release-thought-button{font-size:10px;color:var(--bright);padding:9px 0;border:0;background:none;border-bottom:1px solid var(--line)}footer{margin:0 7%;padding:25px 0 35px;border-top:1px solid var(--line);font-size:6px;letter-spacing:1.7px;color:#a68b7d;display:flex;justify-content:space-between;gap:20px;line-height:1.9}footer a{font-size:8px;letter-spacing:0;color:var(--copper)}.embed .room-header{display:none}.embed .room-intro{padding-top:30px}.embed h1{font-size:58px}.embed .room-stage{height:420px}
+@media(max-width:650px){.room-header{padding:19px 6%}.room-header>span{display:none}.room-intro{padding:34px 20px 24px}h1,.embed h1{font-size:53px}.room-modes{gap:6px;padding:0 15px}.room-modes button{padding:10px 12px;font-size:14px}.room-modes button span{font-size:8px;margin-left:6px}.room-stage,.embed .room-stage{margin:15px 2% 0;height:390px}.stage-whisper{font-size:19px;bottom:12px}.zen-instructions{font-size:9px;padding:0 25px}.room-controls{gap:10px}.room-controls button{font-size:8px;padding:11px 12px}.room-controls label{font-size:8px}.room-controls select{margin-left:5px}.room-status{font-size:9px;margin-top:16px}.release-note{grid-template-columns:1fr;gap:15px;margin:20px 7% 0;padding:27px 0}.release-note label{font-size:34px}.release-note>div>p:last-child{max-width:none}.zen-clock-wrap strong{font-size:80px}footer{flex-direction:column;gap:12px}.release-note textarea{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Keep the garden and its controls together on a phone. */
+.room-controls button{min-height:44px}.room-modes button{min-height:44px}
+.zen-instructions{font-size:11px}.room-status{font-size:11px}
+#zen-canvas{border:1px solid #c18b6020;box-shadow:inset 0 0 70px #09070c70}
+@media(max-width:650px){
+ .room-intro,.embed .room-intro{padding:18px 16px 16px}
+ h1,.embed h1{font-size:clamp(37px,10vw,47px);letter-spacing:-1.1px;white-space:nowrap;margin:12px 0}
+ .room-intro>p:last-child{font-size:12px;line-height:1.65}
+ .eyebrow{font-size:7px;letter-spacing:1.3px}
+ .room-modes{gap:6px;padding:0 12px;flex-wrap:nowrap}
+ .room-modes button{font-size:0;flex:1;min-width:0;padding:12px 5px}
+ .room-modes button span{font-size:11px;margin:0;white-space:nowrap}
+ .room-stage,.embed .room-stage{height:clamp(248px,calc(100svh - 355px),360px);margin:12px 10px 0}
+ .stage-whisper{font-size:18px;bottom:12px;left:10px;right:10px}
+ .zen-instructions{font-size:11px;line-height:1.6;padding:0 19px;margin:10px 0 13px}
+ .room-controls{padding:0 12px;gap:7px}
+ .room-controls>div{gap:7px}
+ .room-controls button{font-size:11px;padding:10px 12px}
+ #zen-motion{font-size:10px}
+ .room-status{font-size:11px;margin:15px 0 22px}
+ .room-controls label{font-size:10px}.room-controls select{font-size:12px;min-height:44px}
+ .release-note>div>p:last-child{font-size:12px;line-height:1.7}
+ .release-note textarea{font-size:16px;min-height:100px}
+ #release-help{font-size:10px}#release-thought-button{font-size:12px;min-height:44px}
+ footer{font-size:7px}footer a{font-size:11px;min-height:44px;padding-top:8px}
+ .zen-clock-wrap strong{font-size:72px}
+}
+@media(max-width:350px){.room-controls{gap:5px}.room-controls button{font-size:10px;padding:10px}.room-controls>div{gap:6px}.stage-whisper{font-size:16px}.room-modes button span{font-size:10px}}
+
+@media(max-width:650px){
+ #time-controls label{font-size:0}
+ #time-controls select{font-size:16px;margin-left:0}
+ #time-controls button{padding-left:10px;padding-right:10px}
+}
+
+@media(min-width:651px){
+ .embed .room-intro{padding:20px 20px 18px}
+ .embed h1{font-size:54px;margin:13px 0}
+ .embed .room-stage{height:clamp(200px,calc(100svh - 340px),420px)}
+}
+@media(max-height:500px) and (min-width:651px){
+ .room-intro,.embed .room-intro{padding:12px 20px}
+ h1,.embed h1{font-size:38px;margin:8px 0}
+ .room-stage,.embed .room-stage{height:220px}
+}
+
+@media(max-width:650px){.zen-clock-wrap strong{font-size:clamp(48px,10svh,72px)}}

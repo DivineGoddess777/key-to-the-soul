@@ -1,0 +1,18 @@
+{
+  "confirmedAt": "2026-10-18",
+  "shipFromState": "PA",
+  "shipFromPostalCode": "16335",
+  "shipping": "8.95 USD contiguous United States; free at candle subtotal 60 USD and up",
+  "noncontiguous": "Calculated rate required; unavailable until connected",
+  "international": false,
+  "taxRegistrations": null,
+  "inventoryApproach": "made_to_order",
+  "tarot": {
+    "monthlyPriceCents": 1111,
+    "personalReadingsEarnedPerPaidMonth": 1,
+    "reader": "Keianna",
+    "unlimitedSelfGuidedDeck": true,
+    "maxUnusedReadings": 15,
+    "cancelAnytime": true
+  }
+}

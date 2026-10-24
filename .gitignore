@@ -1,0 +1,36 @@
+.cache/
+node_modules/
+
+.data/
+.env
+.env.local
+
+release/
+
+# Download reproducibly with models:download; keep manifest and licenses.
+models/**/onnx/*.onnx
+
+.vercel/
+dist/
+.env.*
+!.env.example
+
+# Account exports, private QA captures and runtime state never belong in Git.
+*.env
+*.env.*
+.env*
+!.env.example
+qa/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.pem
+*.key
+
+# Downloaded model weights are reproducible assets, not source-control files.
+models/**/onnx/
+
+# Generated from edge/ and pinned npm dependencies; build before serving.
+vendor/edge/reader-worker.js
+vendor/edge/voice-worker.js

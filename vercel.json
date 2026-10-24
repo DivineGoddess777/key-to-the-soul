@@ -1,0 +1,94 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 300,
+      "includeFiles": "{tarot-deck.js,tarot-state.js,models/manifest.json}",
+      "excludeFiles": "{models/**/onnx/**,release/**,qa/**,.data/**}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/account/:action",
+      "destination": "/api/index?kind=account&action=:action"
+    },
+    {
+      "source": "/api/store-maintenance",
+      "destination": "/api/index?kind=maintenance"
+    },
+    {
+      "source": "/api/subscriptions/:action",
+      "destination": "/api/index?kind=subscriptions&action=:action"
+    },
+    {
+      "source": "/api/personal-readings/:action",
+      "destination": "/api/index?kind=personal&action=:action"
+    },
+    {
+      "source": "/api/paypal-webhook",
+      "destination": "/api/index?kind=webhook"
+    },
+    {
+      "source": "/api/checkout/:action",
+      "destination": "/api/index?kind=checkout&action=:action"
+    },
+    {
+      "source": "/api/owner/:action",
+      "destination": "/api/index?kind=owner&action=:action"
+    },
+    {
+      "source": "/api/members/:action",
+      "destination": "/api/index?kind=member&action=:action"
+    },
+    {
+      "source": "/api/paypal/:action*",
+      "destination": "/api/index?kind=paypal&action=:action*"
+    },
+    {
+      "source": "/models/:file*",
+      "destination": "/api/index?kind=model&file=:file*"
+    },
+    {
+      "source": "/tarot-deck.js",
+      "destination": "/api/index?kind=asset&file=tarot-deck.js"
+    },
+    {
+      "source": "/tarot-state.js",
+      "destination": "/api/index?kind=asset&file=tarot-state.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "same-origin"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/store-maintenance",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}

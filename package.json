@@ -1,0 +1,43 @@
+{
+  "name": "key-to-the-soul",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "check": "node --check dev-server.mjs && node --check storefront.js && node --check storefront-state.js && node --check catalog-ui.js && node --check catalog-collections.js && node --check candle-sizes.js && node --check ritual-bag.js && node --check ritual-bag-ui.js && node --check studio.js && node --check ember-3d.js && node --check zen-state.js && node --check zen-ui.js && node --check moon-room.js && node --check membership.js && node --check tarot.js && node --check tarot-state.js && node --check tarot-art.js && node --check tarot-edge.js && node --check paypal-sandbox.mjs && node --check paypal-sandbox.js && node --test tests/storefront-state.test.mjs tests/ritual-bag.test.mjs tests/catalog-pricing.test.mjs tests/catalog-size-picker.test.mjs tests/zen-state.test.mjs tests/moon-room.test.mjs tests/tarot.test.mjs tests/membership.test.mjs tests/paypal-sandbox.test.mjs tests/paypal-redirect.test.mjs tests/tarot-edge.test.mjs tests/membership-postgres.test.mjs tests/vercel.test.mjs tests/paypal-postgres.test.mjs && node --check server/order-core.mjs && node --check server/orders-postgres.mjs && node --test tests/orders.test.mjs && node --check server/paypal-webhooks.mjs && node --check server/owner-api.mjs && node --check owner.js && node --test tests/paypal-webhooks.test.mjs tests/owner-api.test.mjs && node --check server/store-policy.mjs && node --check server/commerce-config.mjs && node --check server/paypal-commerce.mjs && node --check server/checkout-api.mjs && node --check checkout.js && node --test tests/checkout.test.mjs && node --check server/personal-readings-postgres.mjs && node --check server/personal-readings-api.mjs && node --check personal-readings.js && node --test tests/personal-readings.test.mjs && node --check server/postgres-schema.mjs && node --test tests/postgres-schema.test.mjs && node --check subscriptions.js && node --check server/subscriptions-api.mjs && node --check server/subscriptions-postgres.mjs && node --check server/subscription-reconcile.mjs && node --test tests/subscriptions.test.mjs && node --test tests/refunds.test.mjs && node --test tests/receipts.test.mjs && node --check account.js && node --check server/account-recovery.mjs && node --check server/recovery-api.mjs && node --test tests/recovery.test.mjs && node --test tests/maintenance.test.mjs",
+    "models:download": "node scripts/download-edge-models.mjs",
+    "edge:build": "node scripts/build-edge.mjs",
+    "members": "node --env-file-if-exists=.env.local scripts/members.mjs",
+    "start": "node --env-file-if-exists=.env.local dev-server.mjs",
+    "build:vercel": "npm run edge:build && node scripts/build-vercel.mjs",
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate-members.mjs",
+    "package:vercel": "node scripts/package-vercel.mjs",
+    "reader:review": "node scripts/review-local-reader.mjs",
+    "db:migrate:orders": "node --env-file-if-exists=.env.local scripts/migrate-orders.mjs",
+    "orders": "node --env-file-if-exists=.env.local scripts/orders.mjs",
+    "owner:access": "node --env-file-if-exists=.env.local scripts/owner-access.mjs",
+    "db:migrate:readings": "node --env-file-if-exists=.env.local scripts/migrate-personal-readings.mjs",
+    "db:migrate:subscriptions": "node --env-file-if-exists=.env.local scripts/migrate-subscriptions.mjs",
+    "db:migrate:recovery": "node --env-file-if-exists=.env.local scripts/migrate-recovery.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.1",
+    "esbuild": "0.28.2",
+    "kokoro-js": "1.2.1",
+    "nodemailer": "10.1.6",
+    "pg": "8.23.1"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "overrides": {
+    "kokoro-js": {
+      "@huggingface/transformers": "$@huggingface/transformers"
+    }
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.10",
+    "ajv": "8.20.0"
+  }
+}
